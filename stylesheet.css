@@ -17,41 +17,82 @@ h4 {
     font-size: 36px;
     line-height: 1.2em;
     font-weight: 400; }
+li,
 p {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 300;
     line-height: 30px;
     font-size: 18px;
     margin: 0 0 .8em; }
-    p.big,
-    p.stylize {
+    p.big {
         font-size: 24px;
         line-height: 36px; }
+    ul.stylize li,
     p.stylize {
         font-family: 'Trocchi', serif; }
     p.small {
         font-size: 14px;
         line-height: 26px; }
+        p u { cursor: pointer; }
+        p a {
+            color: #e5b355;
+            font-size: 18px;
+            text-decoration: none !important; }
+.white { color: #ffffff !important; }
+.golden { color: #e5b355 !important; }
+div.seperator {
+    height: 1px;
+    width: 100%;
+    background: #7d7d7d;
+    opacity: .1;
+    display: block;
+    margin: 30px 0 50px;
+}
 nav {
     position: absolute;
-    width: 100%; }
+    width: 100%;
+    z-index: 9999; }
     .header-top {
         position: relative;
         overflow: auto;
         padding: 55px 0;
         width: 100%;
         max-width: 1170px;
-        margin: auto; }
+        margin: auto;
+        z-index: 99; }
         .header-top .logo {
             float: left; }
         .header-top .menu-collapse {
             float: right; }
+    nav.open { position: fixed; height: 100%; }
+    nav.open .navbar { display: flex; }
+    .navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #000028;
+        display: none;
+        align-items: center; }
+        .navbar ul {
+            width: 95%;
+            max-width: 1250px;
+            margin: auto;
+            overflow: visible; }
+            .navbar ul li {
+                list-style: none; }
+                .navbar ul li a {
+                    font-size: 60px;
+                    line-height: 1em;
+                    text-decoration: none !important;
+                    color: #bea647; }
 .slider {
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: flex-end;
-    background-image: url('img/slider-bg.jpg');
+    background-position: center;
     background-size: cover;
     color: #FFF; }
     .slider .wrap {
@@ -59,13 +100,18 @@ nav {
         margin-bottom: 3.5em; }
     .slider h1 span {
         font-size: 85px;
-        color: #bea748;
+        color: #e5b355;
         font-family: 'Trocchi', serif; }
-
+    .slider h3 {
+        font-size: 50px;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 100;
+        margin: .25em 0 0; }
+.slider.team { align-items: center; }
+.slider.team .wrap { margin: 50px auto 0; }
 
 section {
-    padding: 150px 0;
-    background-size: cover !important; }
+    padding: 150px 0; }
 
 
 
@@ -105,7 +151,50 @@ img.icon {
             width: 100%; }
 
 
+ul.dot-list li,
+ul.bar-list li,
+ul.line-list li {
+    list-style-type: none;
+    font-size: 20px;
+}
+ul.dot-list li  { background: url('img/li-dot.svg') left .75em no-repeat; }
+ul.bar-list li  { background: url('img/li-bar.svg') left .75em no-repeat; }
+ul.line-list li { background: url('img/li-line.svg') left .75em no-repeat; }
+ul.dot-list li span,
+ul.bar-list li span,
+ul.line-list li span {
+    padding-left: 50px;
+    display: block;
+}
+
 footer {
+    background: #1f2844;
+    padding: 100px 0; }
+    footer .wrap {
+        overflow: visible; }
+    footer .row > div:not(:first-child):not(:last-child):before {
+        content: '';
+        background: #FFF;
+        opacity: .3;
+        height: 6.5em;
+        width: 2px;
+        position: absolute;
+        top: -1em;
+        left: -20px; }
+    footer p,
+    footer a {
+        margin: 0;
+        color: #FFF;
+        font-family: 'Fira Sans', sans-serif;
+        text-decoration: none !important;
+        font-size: 16px;
+        line-height: 24px; }
+    footer .copyright {
+        font-size: 12px;
+        color: #FFF;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 100; }
+/*footer {
     background-image: url('img/footer-bg.png');
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -128,4 +217,4 @@ footer {
         color: #FFF;
         font-family: 'Fira Sans', sans-serif;
         font-weight: 100;
-        margin-top: 50px; }
+        margin-top: 50px; }*/
