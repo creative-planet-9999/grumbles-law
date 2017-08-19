@@ -2,7 +2,8 @@
 font-family: 'Trocchi', serif;*/
 body {
     font-family: 'Roboto', sans-serif;
-    color: #1f2844; }
+    color: #1f2844;
+    font-size: 18px; }
 h1 {
     font-size: 80px;
     line-height: 80px;
@@ -11,12 +12,21 @@ h2 {
     font-size: 60px;
     line-height: 80px;
     margin: 0 0 .4em; }
+h3 {
+    font-size: 48px;
+    margin: 0 0 25px; }
+h4 {
+    font-size: 36px;
+    letter-spacing: .2em;
+    margin: 0 0 1em; x}
 h5 {
     font-size: 24px;
     line-height: 36px;
     margin: 0 0 1em; }
 h1,
 h2,
+h3,
+h4,
 h5 {
     font-weight: 100;
     text-transform: uppercase;
@@ -35,6 +45,9 @@ p:last-child {
     margin-bottom: 0; }
 img { vertical-align: bottom; }
 section {
+    display: table;
+    width: 100%;
+    overflow: visible;
     background-size: cover;
     background-position: center; }
 header nav {
@@ -57,10 +70,53 @@ header nav {
         height: 100%;
         display: flex;
         align-items: center;
-        background-size: cover; }
-
+        background-size: cover;
+        background-position: center; }
+.golden {
+    color: #BD814B;
+    letter-spacing: .05em; }
+.widen {
+    letter-spacing: .2em; }
+.line-list,
+.dot-list,
+.bar-list {
+    list-style: none;
+    padding-left: 30px;
+    overflow: visible; }
+    .line-list li,
+    .dot-list li {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: .05em;
+        overflow: visible; }
+        .line-list.white li,
+        .bar-list.white li {
+            color: #FFF; }
+            .line-list li:not(:last-child),
+            .dot-list li:not(:last-child),
+            .bar-list li:not(:last-child) {
+                margin-bottom: 40px; }
+            .line-list li:before {
+                content: '';
+                background: #000;
+                height: 1px;
+                top: .8em;
+                left: -30px;
+                width: 15px;
+                position: absolute;
+                transform: translateY(-50%); }
+                .line-list.white li:before {
+                    background: #FFF; }
+.line-list.people li {
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 22px;
+}
+.line-list.people li::before {
+    top: .9em; }
 footer {
-    background: #000;
+    background-image: url('img/footer-bg.jpg');
+    background-size: cover;
     color: #FFF;
     padding: 120px 0; }
     footer .footer-logo {
@@ -87,8 +143,8 @@ footer {
                     text-transform: uppercase; }
                 footer .col:last-child ul li a {
                     text-transform: none; }
-        footer .copyright {
-            margin-top: 2em;
-            font-size: 12px;
-            letter-spacing: .2em;
-            opacity: .5; }
+    footer .copyright {
+        margin-top: 2em;
+        font-size: 12px;
+        letter-spacing: .2em;
+        opacity: .5; }

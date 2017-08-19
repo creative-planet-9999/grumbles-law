@@ -19,7 +19,7 @@ body {
     .wrap {
         overflow: auto;
         width: 90%;
-        max-width: 1250px;
+        max-width: 1400px;
         margin: 0 auto; }
         .semi-wide-wrap {
             width: 95%; }
@@ -55,9 +55,11 @@ body {
                     .col-1  { width: 8.333333%; }
                     .col-offset-1 { margin-left: 8.333333%; }
                     .col-offset-2 { margin-left: 16.666667%; }
+                    .col-offset-5 { margin-left: 41.666667%; }
                     .col-offset-6 { margin-left: 50%; }
                     .col-offset-7 { margin-left: 58.333333%; }
 .white { color: #FFF; }
+.black { color: #000; }
 a { text-decoration: none !important; }
 img { max-width: 100%; }
 .no-margin    { margin: 0 !important; }
